@@ -5,10 +5,6 @@ container.setAttribute('style', 'height:100%;display:flex;flex-direction:column;
 
 
 for(let i=0;i<gridNumber;i++){
-    //const div = document.createElement('div');
-    //div.style.border = '5px red';
-    //div.style.padding = '5px';
-    //row.appendChild(div);
     const row = document.createElement('div');
     row.setAttribute('style', 'display:flex;flex:1;padding:0 auto');
     for(let j=0;j<gridNumber;j++){
@@ -16,11 +12,9 @@ for(let i=0;i<gridNumber;i++){
         div.style.flex = '1';
         div.style.border = '5px red';
         div.style.padding = '5px';
-        
         row.appendChild(div);
     }
     container.appendChild(row);
-    //console.log('row done');
 }
 
 
