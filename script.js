@@ -31,7 +31,12 @@ document.body.appendChild(container);
 const divs = document.querySelectorAll('.grid');
 divs.forEach(div => {
     div.addEventListener('mouseover', ()=>{
-        div.style.backgroundColor = 'red';
+        const randomBetween = (min, max) => min + Math.floor(Math.random() * (max - min + 1));
+        const r = randomBetween(0, 255);
+        const g = randomBetween(0, 255);
+        const b = randomBetween(0, 255);
+        const rgb = `rgb(${r},${g},${b})`; 
+        div.style.backgroundColor = rgb;
     })
 })
 }
