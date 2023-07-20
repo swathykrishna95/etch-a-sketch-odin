@@ -25,6 +25,7 @@ let createGrid = (gridNumber) =>{
 }
 
 
+
 document.body.appendChild(container);
 
 const divs = document.querySelectorAll('.grid');
@@ -36,4 +37,17 @@ divs.forEach(div => {
 }
 
 createGrid(gridNumber);
+
+let eraseGrid = () => {
+    const divs = document.querySelectorAll('div');
+    divs.forEach(div => {
+        div.remove();
+    })
+}
+
+newGrid.addEventListener('click', ()=>{
+    let newNum = prompt('Enter a new grid number: ');
+    eraseGrid();
+    createGrid(newNum);
+})
 
