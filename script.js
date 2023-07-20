@@ -47,7 +47,13 @@ let eraseGrid = () => {
 
 newGrid.addEventListener('click', ()=>{
     let newNum = prompt('Enter a new grid number: ');
-    eraseGrid();
-    createGrid(newNum);
+    if(newNum<=100){
+        eraseGrid();
+        createGrid(newNum);
+    } 
+    else{
+        alert('Enter a number less than 100!');
+    }
+    
 })
 
